@@ -1,0 +1,54 @@
+body{
+	margin: 0;
+	padding: 0;
+}
+.contenedor{
+	margin: 0;
+	padding: 0;
+	height: 660px;
+	width: 100%;
+	background-color: #C7FCFE;
+/*	position: absolute;*/
+}
+.uno{
+	height: 160px;
+	width: 160px;
+	left: 40%;
+	position: absolute;
+}
+.dos{
+	height: 80px;
+	width: 80px;
+	position: relative;
+	left: 40px;
+	top: 40px;
+}
+.tres{
+	height: 40px;
+	width: 40px;
+	position: relative;
+}
+
+#padre1{
+	background-color: #363A67; 	
+}
+#hijom1{
+	background-color: #67C569;
+}
+#hijo1{
+	background-color: #E9EDF6;
+	bottom: 40px;
+	left: 40px;
+}
+#padre2{
+	background-color: #734B76;
+	bottom: 0;
+}
+#hijom2{
+	background-color: #9982B8;
+}
+#hijo2{
+	background-color: #C8BBD6;
+	bottom:80px;
+}
+
