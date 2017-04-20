@@ -1,24 +1,30 @@
 //Trayendonos los elementos que utilizaremos
 var todo = document.getElementById("todo");
-var padre1 = document.createElement("div");
-var padre2 = document.createElement("div");
+var padre = document.createElement("div");
+	padre.classList.add("padre");
+	padre.setAttribute('id', "padre");
+var hijo = document.createElement("div");
+	hijo.classList.add("hijo");
+	hijo.setAttribute('id', "hijo");
 
-creando(padre1,"uno","padre1", "hijo11","hijom1" ,"dos","hijo12", "tres","hijo1");
-creando(padre2,"uno","padre2", "hijo21","hijom2" ,"dos","hijo22", "tres","hijo2");
 
+var id=["arco1","medio","arco2"];
 
-todo.appendChild(padre1);
-todo.appendChild(padre2);
+for(var i=0; i<3;i++){
+	creando(hijo ,id[i]);
+}
 
-function creando(elem, clase ,id, hijo1,id1 ,clase1 ,hijo2, clase2 ,id2 ){
-	elem.classList.add(clase);
-	elem.setAttribute('id', id);
-	var hijo1 = document.createElement("div");
-	hijo1.classList.add(clase1);
-	hijo1.setAttribute('id', id1)
-	var hijo2 = document.createElement("div");
-	hijo2.classList.add(clase2);
-	hijo2.setAttribute('id', id2);
-	elem.appendChild(hijo1);
-	elem.appendChild(hijo2);
+padre.appendChild(hijo);	
+todo.appendChild(padre);
+
+function creando(elem,  carac1 ){
+	var cara = document.createElement("div");
+	cara.classList.add(carac1);
+	cara.setAttribute('id', carac1);
+
+	var cara1 = document.createElement("div");
+	cara1.classList.add("jugador");
+
+	cara.appendChild(cara1);
+	elem.appendChild(cara);
 }

@@ -1,54 +1,70 @@
-body{
-	margin: 0;
-	padding: 0;
+body, html{
+	margin: 0 auto;
 }
 .contenedor{
-	margin: 0;
-	padding: 0;
-	height: 660px;
-	width: 100%;
-	background-color: #C7FCFE;
-/*	position: absolute;*/
+	height: 100vh;
+	box-sizing: border-box;
+	padding: 15vh 30vh;
+	background-color: #F1F0EE;	
 }
-.uno{
-	height: 160px;
-	width: 160px;
-	left: 40%;
+
+.padre{
+	width:  620px;
+	height:  320px;
 	position: absolute;
+	border: 3px solid black;
 }
-.dos{
-	height: 80px;
-	width: 80px;
+.hijo{
+	width:  600px;
+	height:  300px;
 	position: relative;
-	left: 40px;
-	top: 40px;
-}
-.tres{
-	height: 40px;
-	width: 40px;
-	position: relative;
+	left: 7px;
+	top: 7px;
+	border: 1px solid white;
 }
 
-#padre1{
-	background-color: #363A67; 	
+.arco1 ,.arco2 ,.medio{
+	height: 100px;
+	width: 50px;
+	position: absolute;
+	border: 1px solid white;
+	display: inline-block;
+	top: 100px;
 }
-#hijom1{
-	background-color: #67C569;
+.arco1 ,.arco2 {
+	width: 50px;
 }
-#hijo1{
-	background-color: #E9EDF6;
-	bottom: 40px;
-	left: 40px;
+.arco1{
+	left: -1px;
 }
-#padre2{
-	background-color: #734B76;
-	bottom: 0;
+.arco2{
+	right: -1px;
 }
-#hijom2{
-	background-color: #9982B8;
+.medio{
+	width: 100px;
+	border-radius: 50px;
+	left: 250px
 }
-#hijo2{
-	background-color: #C8BBD6;
-	bottom:80px;
+.jugador{
+	height: 5px;
+	width: 5px;
+	border-radius: 5px;
+	position: relative;
+	border: 2px solid white;
+	background-color: white;
 }
-
+#padre ,#hijo , #arco1, #medio,#arco2 {
+	background-color: #798340; 	
+}
+#arco1 .jugador{
+	left: 48px;
+	top: -1px;
+}
+#arco2 .jugador{
+	top:98px;
+	left: -2px;
+}
+#medio .jugador{
+	top:-50px;
+	left: 10px;
+}
